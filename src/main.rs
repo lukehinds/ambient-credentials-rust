@@ -21,6 +21,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let client = reqwest::blocking::Client::new();
     let response = client.get(&req_url.unwrap()).send()?;
     let token = response.text()?;
-    println!("Got token: {}", token);
+    println!("Got response: {}", token);
     Ok(())
 }
